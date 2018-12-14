@@ -25,7 +25,7 @@ RUN mv /tmp/$GRADLE_DIR ./$GRADLE_VERSION
 RUN ln -s /opt/gradle/$GRADLE_VERSION $GRADLE_INSTALL 
 RUN chmod 755 -R /opt/gradle/latest
 
-USER jenkins
+#USER jenkins
 WORKDIR /var/jenkins_home
 ENV GRADLE_HOME=$GRADLE_INSTALL
 ENV PATH=$GRADLE_HOME/bin:$PATH
